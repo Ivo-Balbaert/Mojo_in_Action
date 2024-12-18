@@ -1,0 +1,12 @@
+def main():
+    print("Hello World from Mojo!")
+    print("Bonjour tout le monde!")
+
+    print("Hallo Wereld!")
+    print("¡Hola, mundo!")
+    print("Καλημέρα κόσμε!")
+    print("你好")
+    print("こんにちは 世界!")
+    print("!ہیلو ، دنیا")
+    print("ສະ​ບາຍ​ດີ​ຊາວ​ໂລກ")
+    print("👋🌍❗")

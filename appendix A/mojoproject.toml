@@ -1,0 +1,13 @@
+[project]
+authors = ["Ivo Balbaert <ivo.balbaert@telenet.be>"]
+channels = ["conda-forge", "https://conda.modular.com/max"]
+description = "Add a short description here"
+name = "appendix-A"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+max = ">=24.5.0,<25"
+python = "==3.11"
