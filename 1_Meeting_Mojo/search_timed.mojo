@@ -1,4 +1,4 @@
-from time import now
+from time import perf_counter_ns
 from collections import List
 
 
@@ -29,17 +29,17 @@ fn main():
 
     results = List[Int32]()
 
-    start = now()
+    start = perf_counter_ns()
 
     for i in range(n):
         results.append(binary_search(arr, n - i))
 
-    end = now()
+    end = perf_counter_ns()
     print((end - start) / 1e6, "ms")
 
     print("Results: ", len(results))
 
 
 # =>
-# 56.476036999999998 ms
+# 55.013753 ms
 # Results:  1000000

@@ -1,4 +1,5 @@
+# version 1:
 fn main():
-    n = 42
+    var n: Int = 42
     n *= 4
     print(n)  # => 168

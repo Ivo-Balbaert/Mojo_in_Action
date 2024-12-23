@@ -1,7 +1,6 @@
 def main():
     print("Hello World from Mojo!")
     print("Bonjour tout le monde!")
-
     print("Hallo Wereld!")
     print("¡Hola, mundo!")
     print("Καλημέρα κόσμε!")
