@@ -1,3 +1,6 @@
+from utils import StringRef
+
+
 fn main() raises:
     var s1 = StringRef("Mojo")
     var s2 = StringRef("Mojo")
