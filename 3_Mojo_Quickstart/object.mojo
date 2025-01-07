@@ -1,4 +1,4 @@
-fn add(a: object, b: object) raises -> object:  # 1
+fn add(a: object, b: object) raises -> object:
     return a + b
 
 
@@ -9,4 +9,4 @@ fn main() raises:
     obj.append(object("hello world"))
     print(obj)  # => [123, 'hello world']
 
-    print(add(1, 2.5))  # 2 => 3.5
+    print(add(1, 2.5))  # => 3.5

@@ -7,3 +7,5 @@ fn main():
     light_min = AVG_DIST_EARTH_SUN / (LIGHT_SPEED * 60)
     print("Light takes about", light_min, "minutes from the sun to reach earth")
     # => Light takes 8.3203125 minutes from the sun to reach earth
+    alias MAX: Int = 100
+    # MAX = 7   # => error: expression must be mutable in assignment

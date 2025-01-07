@@ -1,4 +1,4 @@
-def func1():
+fn func1():
     pass
 
 

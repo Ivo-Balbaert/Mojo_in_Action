@@ -1,5 +1,5 @@
 fn main() raises:
-    # Conversion from integers and strings to Bool:
+    # Conversion from integers to Bool:
     var b1 = Bool(42)
     print(b1)  # => True
     var b2 = Bool(0)
@@ -21,14 +21,21 @@ fn main() raises:
     var z2 = Int16(257)
     print(z2)  # => 257
 
-    # Conversions between floats:
+    # Conversions between floats and integers:
     var float: FloatLiteral = 3.3
-    print(float)  # => 3.2999999999999998
+    print(float)  # => 3.3
     var f32 = Float32(float)  # 1
-    print(f32)  # => 3.2999999523162842
+    print(f32)  # => 3.3
     var n2: Int = 108
     var f = Float64(n2)
     print(f)  # => 108.0
+    var f2 = Int8(3.1415)
+    # print(f2)  # => note: constraint failed: the SIMD type must be floating point
+
+    # Conversion from strings to boolean:
+    var str: String = "abc"
+    var b: Bool = bool(str)
+    print(b)  # => True
 
     # Conversion from strings to integers:
     i1 = int("42")
@@ -36,10 +43,10 @@ fn main() raises:
     i2 = atol("42")
     print(i2)  # => 42
     # i3 = atol("Mojo")
-    # print(i3)  # => Unhandled exception caught during execution: String is not convertible to integer with base 10
+    # => Unhandled exception caught during execution: String is not convertible to integer with base 10
 
     # Questions:
-    # 1)
+    # 6)
     var a = UInt32(108)
     print(a)  # => 108
     # in REPL:
@@ -49,7 +56,7 @@ fn main() raises:
     # 108
     # (SIMD[uint32, 1]) a = {
     # (ui32) [0] = 108}
-    # # 2)
-    var i: Int = 2
-    var f3 = Float32(i)  # 3
-    print(f3)  # => 2.0
+    # 7)
+    var i9: Int32 = 108
+    # var f9 = Float32(i9)
+    # => argument #1 cannot be converted from 'SIMD[int32, 1]' to 'SIMD[float32, 1]'

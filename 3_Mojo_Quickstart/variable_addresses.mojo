@@ -14,10 +14,10 @@ def main():
     p2 = UnsafePointer.address_of(n)
     print_address(p2)  # => 140726871503576
 
-    str = "Mojo"
-    p = UnsafePointer.address_of(str)  # => 140722059283008
-    print_address(p)
+    str1 = "Mojo"
+    p3 = UnsafePointer.address_of(str1)  # => 140722059283008
+    print_address(p3)
 
-    str2 = str  # 1
-    p = UnsafePointer.address_of(str2)  # => 140722059283024
-    print_address(p)
+    str2 = str1  # 1
+    p4 = UnsafePointer.address_of(str2)  # => 140722059283024
+    print_address(p4)

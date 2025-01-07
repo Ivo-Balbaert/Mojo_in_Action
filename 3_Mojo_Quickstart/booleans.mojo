@@ -21,5 +21,5 @@ fn main() raises:
     var a = 108
     var b = 2 * 54
     print(a == b)  # => True
-        assert_equal(a, b)
-        # assert_equal(a, 3 * b)   # AssertionError
+    assert_equal(a, b)
+    # assert_equal(a, 3 * b)   # AssertionError

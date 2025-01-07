@@ -1,6 +1,7 @@
 fn sum(lb: Int, ub: Int, step: Int) -> Int:
     var total = 0
     for i in range(lb, ub, step):
+        print(i, end=" ")
         total += i
     return total
 

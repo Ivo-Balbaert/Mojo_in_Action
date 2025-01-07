@@ -1,16 +1,21 @@
 from sys import argv
 
 
-fn main():
-    print("There are ")
-    print(len(argv()))  # => 3
-    print("command-line arguments, namely:")
-    # print(argv()[0])  # => cmdline_args.mojo
-    # print(argv()[1])  # => 42
-    # print(argv()[2])  # => abc
+fn main() raises:
+    var argv = argv()
 
-    for i in range(len(argv())):
-        print(argv()[i])
+    if len(argv) != 3:
+        raise Error("We want exactly 2 arguments")
+
+    print("There are ")
+    print(len(argv))  # => 3
+    print("command-line arguments, namely:")
+    # print(argv[0])  # => cmdline_args.mojo
+    # print(argv[1])  # => 42
+    # print(argv[2])  # => abc
+
+    for i in range(len(argv)):
+        print(argv[i])
 
 
 # $ mojo cmdline_args.mojo 42 "abc"

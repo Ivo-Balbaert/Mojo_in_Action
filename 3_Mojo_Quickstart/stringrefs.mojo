@@ -1,4 +1,4 @@
-from utils import StringRef
+from utils import StringRef, StringSlice
 
 
 fn main() raises:
@@ -13,5 +13,9 @@ fn main() raises:
 
     var s = "Mojo"
     var ptr = s.unsafe_ptr()
-    var str_ref = StringRef(ptr)
+    var str_ref = StringRef(ptr, len(s))
     print(str_ref)  # => Mojo
+
+    var strsl = StringSlice("Mojo")
+    print(strsl)  # => Mojo
+    print(strsl.find("o"))  # => 1

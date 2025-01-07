@@ -9,7 +9,8 @@ fn main():
         discount_rate = 0.3
     else:
         discount_rate = 0.05  # 5% discount for other book categories
-    print("Discount rate for Book with type", book_type, "is:", discount_rate)
+    book_type = "cookbook"
+    print("Discount rate for vook with type", book_type, "is:", discount_rate)
 
 
-# => Discount rate for Book with ID unknown is: 0.050000000000000003
+# => Discount rate for book with type cookbook is: 0.05

@@ -3,7 +3,7 @@ import math
 
 
 fn main():
-    print(simdbitwidth())  # 1 => 256
-    print(simdbytewidth())  # 2 => 32
-    print(simdwidthof[DType.uint64]())  # 3 => 4
-    print(simdwidthof[DType.float32]())  # 4 => 8
+    print(simdbitwidth())  # => 256
+    print(simdbytewidth())  # => 32
+    print(simdwidthof[DType.uint64]())  # => 4
+    print(simdwidthof[DType.float32]())  # => 8
