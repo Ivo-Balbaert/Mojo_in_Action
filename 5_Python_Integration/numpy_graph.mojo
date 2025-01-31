@@ -23,11 +23,11 @@ fn use_numpy(np: PythonObject) raises:
     print(arr3.shape)  # => (3, 5)
 
 
-fn use_matplotlib(np: PythonObject, plot: PythonObject) raises:
+fn use_matplotlib(np: PythonObject, plt: PythonObject) raises:
     var arr1 = np.array([1, 2, 3, 4])
     var arr2 = np.array([30, 20, 50, 60])
-    plot.plot(arr1, arr2)
-    plot.show()
+    plt.plot(arr1, arr2)
+    plt.show()
 
 
 fn main() raises:

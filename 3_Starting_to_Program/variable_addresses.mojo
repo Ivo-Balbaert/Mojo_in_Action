@@ -1,13 +1,15 @@
-from memory.unsafe_pointer import UnsafePointer
+from memory import UnsafePointer
 
 
-def print_address(ptr: UnsafePointer):
+fn print_address(ptr: UnsafePointer):
     print(int(ptr))
 
 
-def main():
+fn main():
     n = 1
-    p1 = UnsafePointer.address_of(n)  # => 140726871503576
+    p1 = UnsafePointer.address_of(
+        n,
+    )  # => 140726871503576
     print_address(p1)
 
     n = 2

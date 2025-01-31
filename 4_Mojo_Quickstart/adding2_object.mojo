@@ -2,6 +2,7 @@ def add(x: object, y: object) -> object:
     return x + y
 
 
+# fn main() raises:
 def main():
     z = add(3, 5)
     print(z)  # => 8

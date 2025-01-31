@@ -33,6 +33,7 @@ fn main() raises:
     print(s5[2:4])  # => cd
     print(s5[1:])  # => bcde
     print(s5[:5])  # => abcde
+    print(s5[: len(s5)])  # => abcde
     print(s5[:-1])  # => abcd
     print(s5[::2])  # => ace
 
