@@ -1,9 +1,17 @@
 fn main() raises:
+    # int("MLIR") # error: String is not convertible to integer with base 10: 'MLIR'
+
     # Conversion from integers to Bool:
     var b1 = Bool(42)
     print(b1)  # => True
     var b2 = Bool(0)
     print(b2)  # => False
+
+    # Conversion from floats to Bool:
+    var b3 = bool(3.14)
+    print(b3)  # => True
+    var b4 = bool(0.0)
+    print(b4)  # => False
 
     # Conversion from Bool to integer:
     var c1: Bool = True
@@ -20,11 +28,13 @@ fn main() raises:
     var z = 257
     var z2 = Int16(257)
     print(z2)  # => 257
+    var z3 = Int8(257)
+    print(z3)  # => 257
 
     # Conversions between floats and integers:
     var float: FloatLiteral = 3.3
     print(float)  # => 3.3
-    var f32 = Float32(float)  # 1
+    var f32 = Float32(float)
     print(f32)  # => 3.3
     var n2: Int = 108
     var f = Float64(n2)

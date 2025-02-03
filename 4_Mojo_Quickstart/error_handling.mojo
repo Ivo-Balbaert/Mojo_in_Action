@@ -11,3 +11,4 @@ fn main():
         print("Error is raised:", err)
         print("The number given was", guess)
         print("Guess an integer number please.")
+    print("The program now continues.")
