@@ -52,9 +52,7 @@ fn main():
         print("neon", end=" / ")
     if is_apple_m1():
         print("apple_m1", end=" / ")
-    if has_vnni() & has_avx512f():
-        print("avx512_vnni1")
     if has_vnni():
-        print("avx_vnni1", end=" / ")
+        print("avx512_vnni", end=" / ")
     if has_nvidia_gpu_accelerator():
         print("NVIDIA-GPU", end=" / ")

@@ -47,5 +47,3 @@ fn main() raises:
     s1 = Scalar[DType.int32](42)
     s2 = SIMD[DType.int32, 1](42)
     assert_equal(s1, s2)
-
-    s3 = SIMD[ui8, 1]()

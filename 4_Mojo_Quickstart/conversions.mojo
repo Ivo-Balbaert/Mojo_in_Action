@@ -25,11 +25,20 @@ fn main() raises:
     var x: UInt8 = 42
     var y: Int8 = x.cast[DType.int8]()
     print(y)  # => 42
+
+    var x2: Int8 = -42
+    # var y2: UInt8 = x.cast[DType.int8]()
+
+    var x3: Int16 = 500
+    # var y3: Int8 = Int8(x3)
+    # => error: no matching function in initialization
+    # => error: argument #1 cannot be converted from 'SIMD[int16, 1]' to 'SIMD[int8, 1]'
+
     var z = 257
     var z2 = Int16(257)
     print(z2)  # => 257
     var z3 = Int8(257)
-    print(z3)  # => 257
+    print(z3)  # => 1
 
     # Conversions between floats and integers:
     var float: FloatLiteral = 3.3
