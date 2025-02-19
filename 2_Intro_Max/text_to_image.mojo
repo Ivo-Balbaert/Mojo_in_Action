@@ -1,6 +1,6 @@
 #!/usr/bin/env mojo
 # ===----------------------------------------------------------------------=== #
-# Copyright (c) 2024, Modular Inc. All rights reserved.
+# Copyright (c) 2025, Modular Inc. All rights reserved.
 #
 # Licensed under the Apache License v2.0 with LLVM Exceptions:
 # https://llvm.org/LICENSE.txt
@@ -81,7 +81,7 @@ def split[dtype: DType](x: Tensor[dtype], i: Int) -> Tensor[dtype]:
 def main():
     # Parse args.
     USAGE = (
-        "Usage: ./text-to-image.🔥 --prompt <str> [--negative-prompt <str>]"
+        "Usage: ./text_to_image.🔥 --prompt <str> [--negative-prompt <str>]"
         " [--num-steps <int>] [--seed <int>] [-o <str>]"
     )
 
@@ -92,29 +92,29 @@ def main():
 
     # Set default values
     seed()
-    prompt = str("")
-    negative_prompt = str("")
+    prompt = String("")
+    negative_prompt = String("")
     num_steps = 25
     hf = Python.import_module("huggingface_hub")
     model_dir = Path(
-        str(hf.snapshot_download("modularai/stable-diffusion-1.5-onnx"))
+        String(hf.snapshot_download("modularai/stable-diffusion-1.5-onnx"))
     )
-    output = str("output.png")
+    output = String("output.png")
 
     for i in range(1, len(argv), 2):
         if argv[i] == "--prompt":
-            prompt = argv[i + 1]
+            prompt = String(argv[i + 1])
         elif argv[i] == "--negative-prompt":
-            negative_prompt = argv[i + 1]
+            negative_prompt = String(argv[i + 1])
         elif argv[i] == "--num-steps":
             num_steps = atol(argv[i + 1])
         elif argv[i] == "--seed":
             seed(atol(argv[i + 1]))
         elif argv[i] == "-o" or argv[i] == "--output":
-            output = argv[i + 1]
+            output = String(argv[i + 1])
         else:
             print(USAGE)
-            raise Error(str("Unknown option: ") + argv[i])
+            raise Error(String("Unknown option: ") + argv[i])
 
     # Only required arg is --prompt
     if prompt == "":
@@ -139,7 +139,7 @@ def main():
     tokenizer = transformers.CLIPTokenizer.from_pretrained(
         os.path.join(model_dir.path, "tokenizer")
     )
-    max_length = int(tokenizer.model_max_length)
+    max_length = Int(tokenizer.model_max_length)
     prompt_p = tokenizer(prompt, padding="max_length", max_length=max_length)
     prompt_n = tokenizer(
         negative_prompt, padding="max_length", max_length=max_length
@@ -186,7 +186,7 @@ def main():
         # Execute the diffusion model with bs=2. Both batches have same primary input and
         # timestep, but the encoder_hidden_states (primary prompt vs negative) differs.
         timestep_tensor = Tensor[DType.int64](TensorSpec(DType.int64, 1))
-        timestep_tensor[0] = int(schedule.timesteps[i])
+        timestep_tensor[0] = Int(schedule.timesteps[i])
 
         diffuser_output = img_diffuser.execute(
             "sample",

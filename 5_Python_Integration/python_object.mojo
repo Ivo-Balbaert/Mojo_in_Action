@@ -24,6 +24,14 @@ fn main() raises:
         print(py_obj, end=" / ")
     # => 42 / cat / 3.14159 /
     print()
+
+    py_list = Python.list()
+    py_list.append(7)
+    py_list.append("forty_two")
+    py_list.append(2.718)
+    py_list.append(True)
+    print(py_list)  # => [7, 'forty_two', 2.718, True]
+
     var py_dict = Python.evaluate("{'a': 1, 'b': 2.71828, 'c': 'sushi'}")
     for py_key in py_dict:
         print(py_key, py_dict[py_key], end=" / ")
