@@ -10,14 +10,14 @@ fn main() raises:
     print(chr(97))  # => a
     print(ord("🔥"))  # =>    128293
     print(chr(128293))  # => 🔥
-    print(isdigit(ord("8")))  # => True
-    print(isdigit(ord("a")))  # => False
+    print(StringLiteral.isdigit("8"))  # => True
+    print(StringLiteral.isdigit("a"))  # => False
 
-    var sn: String = str(42)
+    var sn = String(42)
     var sn1 = "108"
-    var sn2 = str(108)
+    var sn2 = String(108)
     assert_equal(sn1, sn2)
-    var sn3 = str("")
+    var sn3 = String("")
 
     # String slices:
     var s4: String = "Mojo is 🔥"
@@ -27,14 +27,5 @@ fn main() raises:
     print(ord(s4[7]))  # => 32
     print(len(s4))  # => 12
     print(s4[8])  # => �
-    print(s4[8:12])  # => 🔥
-
-    var s5 = String("abcde")
-    print(s5[2:4])  # => cd
-    print(s5[1:])  # => bcde
-    print(s5[:5])  # => abcde
-    print(s5[: len(s5)])  # => abcde
-    print(s5[:-1])  # => abcd
-    print(s5[::2])  # => ace
 
     # s5[3] = "x"   # => expression must be mutable in assignment

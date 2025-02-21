@@ -8,9 +8,9 @@ fn main() raises:
     print(b2)  # => False
 
     # Conversion from floats to Bool:
-    var b3 = bool(3.14)
+    var b3 = Bool(3.14)
     print(b3)  # => True
-    var b4 = bool(0.0)
+    var b4 = Bool(0.0)
     print(b4)  # => False
 
     # Conversion from Bool to integer:
@@ -53,11 +53,11 @@ fn main() raises:
 
     # Conversion from strings to boolean:
     var str: String = "abc"
-    var b: Bool = bool(str)
+    var b: Bool = Bool(str)
     print(b)  # => True
 
     # Conversion from strings to integers:
-    i1 = int("42")
+    i1 = Int("42")
     print(i1)  # => 42
     i2 = atol("42")
     print(i2)  # => 42

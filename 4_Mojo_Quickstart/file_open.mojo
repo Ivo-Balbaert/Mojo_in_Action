@@ -1,7 +1,7 @@
 fn main() raises:
     var file: FileHandle
     try:
-        file = open("my_file1.txt", "r")
+        file = open("my_file.txt", "r")
         print(file.read())
     except err:
         print("An error occurred", err)

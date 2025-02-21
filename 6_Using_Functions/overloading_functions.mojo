@@ -18,7 +18,7 @@ fn add(*values: Int) -> Int:
 
 fn add(x: Int, f: Float16) -> Int:
     print("version 4: ", end="")
-    return int(x + f)
+    return Int(x + f)
 
 
 fn add(x: String, y: String) -> String:
@@ -36,5 +36,5 @@ fn main():
     print(add("Hi ", "Suzy!"))  # => version 5: Hi Suzy!
     # print(add(1, "Hi"))  #  => error: no matching function in call to 'add'
     # print(add(False, "Hi"))  #  => error: no matching function in call to 'add'
-    print(add(str(1), " Hi"))  #  => version 5: 1 Hi
-    print(add(str(False), " Hi"))  #  => version 5: False Hi
+    print(add(String(1), " Hi"))  #  => version 5: 1 Hi
+    print(add(String(False), " Hi"))  #  => version 5: False Hi

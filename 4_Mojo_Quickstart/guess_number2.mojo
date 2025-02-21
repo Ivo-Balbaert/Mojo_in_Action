@@ -3,7 +3,7 @@ from random import seed, random_ui64
 alias MAX_ATTEMPTS = 10
 
 
-fn main():
+fn main() raises:
     seed()
     var secret_number = random_ui64(1, 99)
     # print(secret_number)
@@ -11,7 +11,7 @@ fn main():
     for num_guess in range(MAX_ATTEMPTS):
         guess = input("Guess a number between 1 and 100: ")
         try:
-            int_guess = int(guess)
+            int_guess = Int(guess)
         except err:
             print("Error is raised:", err)
             print("The number given was", guess)

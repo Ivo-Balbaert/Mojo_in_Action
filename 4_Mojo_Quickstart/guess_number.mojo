@@ -9,7 +9,7 @@ fn main() raises:
     # print(secret_number)
     for num_guess in range(MAX_ATTEMPTS):
         guess = input("Guess a number between 1 and 100: ")
-        var int_guess: UInt64 = int(guess)
+        var int_guess: UInt64 = Int(guess)
         if int_guess == secret_number:
             print(int_guess, "is the answer!")
             print("You got it right in", num_guess + 1, "times")

@@ -2,7 +2,7 @@ from memory.unsafe_pointer import UnsafePointer
 
 
 def print_pointer(ptr: UnsafePointer):
-    print(int(ptr))
+    print(Int(ptr))
 
 
 fn main() raises:

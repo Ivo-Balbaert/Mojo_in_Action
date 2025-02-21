@@ -12,9 +12,9 @@ fn use_python(np: PythonObject, plt: PythonObject) raises:
     # [  0.   1.   2.   3.   4.   5.   ...   253. 254. 255.]
     var simd_array = SIMD[DType.float64, 256]()
 
-    var size = int(py_result.size)
+    var size = Int(py_result.size)
     for i in range(size):
-        simd_array[i] = float(py_result[i])
+        simd_array[i] = Float64(py_result[i])
 
     simd_array = math.cos(simd_array * (math.pi * 2.0 / 256.0))  # 8
     # print(simd_array)
