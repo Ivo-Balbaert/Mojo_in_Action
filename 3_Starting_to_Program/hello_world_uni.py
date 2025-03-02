@@ -1,4 +1,4 @@
-print("Hello World from Mojo!")
+print("Hello World from Python!")
 print("Bonjour tout le monde!")
 print("Hallo Wereld!")
 print("¡Hola, mundo!")
