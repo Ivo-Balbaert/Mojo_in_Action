@@ -5,7 +5,7 @@ fn outer(f: fn () escaping -> Int):
 fn call_it():
     var num = 5  # 1
 
-    fn inner() -> Int:  # 2  # inner captures the context variable a
+    fn inner() -> Int:  # 2  # inner captures the context variable num
         return num
 
     outer(inner)
