@@ -30,13 +30,13 @@ import python_utils
 from scheduler import Scheduler
 
 
-var GUIDANCE_SCALE_FACTOR = Float32(7.5)
-var LATENT_SCALE_FACTOR = Float32(0.18215)
-var OUTPUT_HEIGHT = 512
-var OUTPUT_WIDTH = 512
-var LATENT_WIDTH = OUTPUT_WIDTH // 8
-var LATENT_HEIGHT = OUTPUT_HEIGHT // 8
-var LATENT_CHANNELS = 4
+alias GUIDANCE_SCALE_FACTOR = Float32(7.5)
+alias LATENT_SCALE_FACTOR = Float32(0.18215)
+alias OUTPUT_HEIGHT = 512
+alias OUTPUT_WIDTH = 512
+alias LATENT_WIDTH = OUTPUT_WIDTH // 8
+alias LATENT_HEIGHT = OUTPUT_HEIGHT // 8
+alias LATENT_CHANNELS = 4
 
 
 def vstack[dtype: DType](a: Tensor[dtype], b: Tensor[dtype]) -> Tensor[dtype]:
@@ -81,7 +81,7 @@ def split[dtype: DType](x: Tensor[dtype], i: Int) -> Tensor[dtype]:
 def main():
     # Parse args.
     USAGE = (
-        "Usage: ./text_to_image.🔥 --prompt <str> [--negative-prompt <str>]"
+        "Usage: ./text_to_image.mojo --prompt <str> [--negative-prompt <str>]"
         " [--num-steps <int>] [--seed <int>] [-o <str>]"
     )
 

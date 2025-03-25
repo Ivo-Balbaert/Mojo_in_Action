@@ -5,6 +5,7 @@ fn outer[f: fn () capturing -> Int]():
 fn call_it():
     var num = 5  # 1
 
+    @__copy_capture(num)
     @parameter
     fn inner() -> Int:  # 2
         return num

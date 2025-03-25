@@ -8,8 +8,10 @@ fn sqrt_checked(num: Int64) raises -> Float64:
 
 
 fn main() raises:
-    var num = -7
-    print(sqrt_checked(num))
+    var num1 = 64
+    print(sqrt_checked(num1))  # => 8.0
+    var num2 = -7
 
 
+#   print(sqrt_checked(num2))
 # => AssertionError: For sqrt the number must be >= 0!

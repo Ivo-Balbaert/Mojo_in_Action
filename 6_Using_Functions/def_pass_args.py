@@ -3,6 +3,7 @@ def update_vector(u):
     print(u)  # =>  [108, 42, 42, 7]
 
 a = [108, 42, 13, 7]
+print(sum(a)) # => 170
 update_vector(a)
 print(a)      # => [108, 42, 42, 7]
-
+print(sum(a)) # => 199
