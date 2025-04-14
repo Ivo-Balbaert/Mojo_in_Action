@@ -41,7 +41,7 @@ fn main() raises:
     print(z3)  # => 1
 
     # Conversions between floats and integers:
-    var float: FloatLiteral = 3.3
+    var float = 3.3
     print(float)  # => 3.3
     var f32 = Float32(float)
     print(f32)  # => 3.3
@@ -63,6 +63,9 @@ fn main() raises:
     print(i2)  # => 42
     # i3 = atol("Mojo")
     # => Unhandled exception caught during execution: String is not convertible to integer with base 10
+    # Conversion from strings to integers:
+    f3 = atof("2.71")
+    print(f3)  # => 2.71
 
     # Questions:
     # 6)
