@@ -12,11 +12,17 @@ fn main() raises:
     print(s5[: len(s5)])  # => abcde
     print(s5[:-1])  # => abcd
     print(s5[::2])  # => ace
+    print(s5[1:4:2])  # => bd
 
     var strsl = StringSlice("Mojo")
     print(strsl)  # => Mojo
     print(strsl.find("o"))  # => 1
 
-    var strsl2 = StringSlice("108")
-    # print(strsl2.atol())µ
-    # StringSlice[StaticConstantOrigin]' value has no attribute 'atol'
+    # slice function:
+    var a = slice(5)
+    var b = slice(2, 4)
+    var c = slice(1, 4, 2)
+
+    print(s5[a])  # => abcde
+    print(s5[b])  # => cd
+    print(s5[c])  # => bd
