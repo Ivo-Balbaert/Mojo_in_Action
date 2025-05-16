@@ -5,7 +5,7 @@ fn main():
     var ptr: UnsafePointer[Int]
     ptr = UnsafePointer[Int]()
     var n = 42
-    var ptr1 = UnsafePointer[Int].address_of(n)
+    var ptr1 = UnsafePointer[Int](to=n)
     if ptr:
         print("ptr is not a null pointer", end=", ")
         var value = ptr[]

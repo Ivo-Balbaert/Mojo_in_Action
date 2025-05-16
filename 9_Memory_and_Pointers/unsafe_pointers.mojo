@@ -3,6 +3,7 @@ from memory import UnsafePointer  # A
 
 def print_address(ptr: UnsafePointer):
     print(Int(ptr))
+    # print(ptr)
 
 
 fn main() raises:
@@ -18,7 +19,7 @@ fn main() raises:
 
     # Point to an existing value:
     var value2 = 108
-    ptr = UnsafePointer[Int].address_of(value2)
+    ptr = UnsafePointer[Int](to=value2)
     print_address(ptr)  # => 140727043935248
     print(ptr[])  # => 108
     print(ptr[0])  # => 108
@@ -51,7 +52,7 @@ fn main() raises:
     ptr2.destroy_pointee()
     ptr_str.destroy_pointee()
 
-    # var i1 = ptr.take_pointee()
+    var i1 = ptr.take_pointee()
     ptr2.take_pointee()  # => 'Int' value is unused
     ptr_str.take_pointee()  # => warning: 'String' value is unused
 
@@ -60,7 +61,7 @@ fn main() raises:
 
     # 2 - Destroying the pointer
     # ptr.free()
-    ptr2.free()
+    # ptr2.free()
     ptr_str.free()
     print_address(ptr_str)  # => 21021715349504
-    print(ptr_str[])  # =>  # => �@��� to initialize���
+    # print(ptr_str[])  # =>  # => �@��� to initialize���
